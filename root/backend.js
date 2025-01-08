@@ -909,7 +909,7 @@ app.get('/play/:id', (req, res) => {
 	const manifestUrl = getManifestUrlById(videoId);
 	// console.log("IN PLAY AFTER GETTING MANIFEST URL");
 	// console.log(manifestUrl);
-	fs.readFile(path.join('/var/www/html', 'video_player3.html'), `utf8`, (err, data) => {
+	fs.readFile(path.join('/var/www/html', 'video_player.html'), `utf8`, (err, data) => {
 		const htmlContent = data
 	            .replace(/{{MANIFEST_URL}}/g, manifestUrl)
         	    .replace(/{{VIDEO_ID}}/g, videoId)
