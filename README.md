@@ -15,6 +15,7 @@ Originally, CloudPlay was hosted on an Ubuntu 22.04 server, utilizing Nginx as a
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB (Mongoose)
 - **Video Processing**: FFmpeg, Bull Queue (with Redis)
+- **Email Verification**: Postfix, Nodemailer
 
 ### 🚀 Running the project:
 To run the project without a load balancer, follow these steps:
@@ -30,15 +31,18 @@ To run the project without a load balancer, follow these steps:
 3. Install FFmpeg:
    - sudo apt install ffmpeg
 
-4. Install npm:
+4. Instll Postfix:
+   - sudo apt install postfix
+   
+5. Install npm:
    - sudo apt install nodejs npm
 
-5. The required dependencies are listed in package.json. Install the dependencies:
+6. The required dependencies are listed in package.json. Install the dependencies:
    - npm install
 
-6. Refer to the file paths shown in the repository and place all of the files from this repository into their respective file paths.
+7. Refer to the file paths shown in the repository and place all of the files from this repository into their respective file paths.
 
-7. Install and start the mongoDB database and start mongosh
+8. Install and start the mongoDB database and start mongosh
 
-8. Start the backend server:
+9. Start the backend server:
    - node backend.js
